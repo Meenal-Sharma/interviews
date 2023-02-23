@@ -1,9 +1,7 @@
 <!-- Edit Quote -->
 <template>
   <h3 class="slds-page-header__title">Welcome to quote {quoteData.name}!</h3>
-  Quote Project Ends On:
-  <lightning-formatted-date-time
-    value={quoteData.endDate}
-    time-zone="UTC"
-  ></lightning-formatted-date-time>
+  <lightning-input type="date" value={quoteData.startDate} variant="standard" name="startDate" data-recid="startDate" label="Start Date"></lightning-input>
+  <lightning-input type="date" value={quoteData.endDate} variant="standard" name="endDate" data-recid="endDate" label="End Date"></lightning-input>
+  <lightning-button label="Save" title="save" onclick={handleSave}></lightning-button>
 </template>
